@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Your Name: {{username}}
+    <form action="/create/" method="post">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="case name" required/>
+        <input type="text" name="description" placeholder="case description" required/>
+        <select name="crime_type">
+            <option value="Child Abuse">CHILD ABUSE</option>
+            <option value="Child Kidnapping">CHILD KIDNAPPING</option>
+            <option value="Child Molestation">CHILD MOLESTATION</option>
+            <option value="Child Trafficking">CHILD TRAFFICKING</option>
+            <option value="Other">OTHER CHILD CRIMES</option>
+        </select>
+        <button type="submit">SUBMIT</button>
+    </form>
+</body>
+</html>
